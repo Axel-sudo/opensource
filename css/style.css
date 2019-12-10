@@ -1,0 +1,20 @@
+/* Design menu */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background color: black;
+}
+
+/* Typographie */
+
+h1,
+h2,
+p,
+li,
+a {
+    color: white;
+    font-family: 'Zilla Slab', serif;
+    
+}
