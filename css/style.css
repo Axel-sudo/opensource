@@ -1,21 +1,29 @@
-/* Design menu */
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    background-color: black;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
 }
 
-/* Typographie */
-
-h1,
-h2,
-p,
-li,
-a {
-    color: white;
-    font-family: 'Zilla Slab', serif;
-    
+/* Typography */
+h1, h2 {
+  font-family: 'Zilla Slab', serif;
+  font-size: 65px;
+  margin: 0;
 }
 
+.anchor-num {
+  position: relative;
+  color: #999;
+}
+
+/* Nav & icon */
+/* Screens */
+.screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.screen .content {
+  padding: 50px 0;
+}
