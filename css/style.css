@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background color: black;
+    background-color: black;
 }
 
 /* Typographie */
@@ -18,3 +18,4 @@ a {
     font-family: 'Zilla Slab', serif;
     
 }
+
