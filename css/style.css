@@ -27,3 +27,22 @@ h1, h2 {
 .screen .content {
   padding: 50px 0;
 }
+
+.logo {
+  height: 40px;
+  margin-top: 10px;
+margin left: 10px;
+
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+footer ul{
+  justify-content: flex-end;
+}
