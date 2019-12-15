@@ -25,6 +25,10 @@ h3 {
   font-size: 22px;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 /* Navigation */
 .col-nav {
   min-height: 100vh;
@@ -150,13 +154,13 @@ h3 {
   text-decoration: none;
   color: #54FFBD;
   border: 1px solid;
-  border-radius: 24px;
   padding: 11px 20px;
   font-weight: bold;
   font-size: 17px;
 }
 
-.btn:hover {
+.btn:hover, .alt-btn:hover, .btn:focus, .alt-btn:focus {
+  outline: 0;
   background-color: #54FFBD;
   color: #000;
 }
@@ -180,18 +184,20 @@ h3 {
 
 .content .text {
   margin-top: 30px;
+  font-size: 18px;
 }
 
 /* Web services */
 .cat-container {
+  padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .card {
-  margin: 50px 0;
-  max-width: 260px;
+  margin: 20px 0;
+  max-width: 270px;
   padding: 0 15px;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
@@ -201,8 +207,7 @@ h3 {
 }
 
 .alt-head {
-  position: absolute;
-  padding: 15px 5px;
+  padding: 15px 5px 0;
 }
 
 .alt-head h3 {
@@ -234,8 +239,53 @@ h3 {
   background-image: url(../img/youtube.png);
 }
 
+.alternative {
+  padding: 0 20px;
+  margin: 30px 0;
+}
+
+.alternative a {
+  text-decoration: none;
+}
+
+.alt-text {
+  display: inline-block;
+}
+
+.alt-url {
+  color: #999;
+}
+
+.alt-text span {
+  display: block;
+}
+
+.alt-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .alt-body {
-  padding: 130px 0;
+  padding: 20px 0;
+}
+
+.alt-icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.alt-btn {
+  display: inline-block;
+  padding: 5px 20px;
+  color: #54FFBD;
+  border: 1px solid #54FFBD;
+  margin-top: 13.5px;
+  font-weight: bold;
 }
 
 /* Screen content */
