@@ -1,19 +1,22 @@
 // Navbar scroll
 function scroll() {
+  // Define all sections as variables
+  var sections = document.getElementsByClassName("screen");
+  var navlist = document.getElementsByClassName("nav-item");
+
   // Check if the section is currently in view
   // Then apply the active class name to the corresponding nav item
-  if (window.scrollY >= document.getElementById("def").offsetTop && window.scrollY < document.getElementById("def").offsetTop + document.getElementById("def").clientHeight) document.getElementById("defspan").className = "nav-item active";
-  else document.getElementById("defspan").className = "nav-item";
+  for (var i = 0; i < sections.length; i++) {
+    if (!navlist[i].classList.contains("active") && window.scrollY >= sections[i].offsetTop && window.scrollY < sections[i].offsetTop + def.clientHeight / 2) {
+      for (var y = 0; y < navlist.length; y++) {
+        if (navlist[y] !== navlist[i]) navlist[y].classList.remove("active");
+      }
+      navlist[i].classList.add("active");
+      break;
+    }
+  }
 
-  if (window.scrollY >= document.getElementById("priv").offsetTop && window.scrollY < document.getElementById("priv").offsetTop + document.getElementById("priv").clientHeight) document.getElementById("privspan").className = "nav-item active";
-  else document.getElementById("privspan").className = "nav-item";
-
-  if (window.scrollY >= document.getElementById("altweb").offsetTop && window.scrollY < document.getElementById("altweb").offsetTop + document.getElementById("altweb").clientHeight) document.getElementById("webspan").className = "nav-item active";
-  else document.getElementById("webspan").className = "nav-item";
-
-  if (window.scrollY >= document.getElementById("altsoft").offsetTop && window.scrollY < document.getElementById("altsoft").offsetTop + document.getElementById("altsoft").clientHeight) document.getElementById("softspan").className = "nav-item active";
-  else document.getElementById("softspan").className = "nav-item";
-
+  // Make the navbar sticky when it reaches the bottom of the page
   if (window.scrollY >= document.getElementById("ft").offsetTop - window.innerHeight) document.getElementById("nav").className = "col-nav sticky";
   else document.getElementById("nav").className = "col-nav";
 }

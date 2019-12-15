@@ -2,7 +2,7 @@ body {
   margin: 0;
   background-color: #000;
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 /* Typography */
@@ -113,6 +113,27 @@ a {
   position: relative;
 }
 
+/* Quote */
+.quote {
+  padding: 70px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote .text {
+  padding: 0 20px;
+  font-size: 19px;
+}
+
+.quote p {
+  font-style: italic;
+}
+
+.quote .author {
+  font-weight: bold;
+}
+
 /* Screens */
 .screen {
   min-height: 100vh;
@@ -161,13 +182,65 @@ a {
   padding: 0;
 }
 
+.footer li {
+  display: inline-block;
+}
+
 .footer-main {
-  padding: 0px 40px 45px 45px;
+  border-top: 1px solid #334;
+  margin: 0px 45px;
+  padding: 55px 0 80px;
+  display: flex;
+  font-size: 15px;
+  flex-wrap: wrap;
 }
 
 .footer-top {
-  border-top: 1px solid;
-  padding-top: 20px;
+  width: 100%;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row-reverse;
+  align-items: flex-end;
+}
+
+/* Legal */
+.links {
+  max-width: 60%;
+}
+
+.links li {
+  margin-right: 50px;
+}
+
+/* Socials */
+.social li {
+  margin-left: 20px;
+}
+
+.alt {
+  display: none;
+}
+
+.twitter {
+  background: url(../img/twitter.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+.instagram {
+  background: url(../img/instagram.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
 }
 
 /* Responsive */
