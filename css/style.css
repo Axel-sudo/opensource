@@ -90,11 +90,13 @@ a {
   width: 169px;
   position: absolute;
   margin: 35px 45px;
+  z-index: 10;
 }
 
 .icon img {
   width: 100%;
   user-select: none;
+  pointer-events: none;
 }
 
 /* Content */
@@ -164,7 +166,7 @@ a {
 }
 
 .screen .content {
-  padding: 100px 45px;
+  padding: 130px 45px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   max-width: 900px;
@@ -172,7 +174,7 @@ a {
 }
 
 .content .text {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 /* Web services */
