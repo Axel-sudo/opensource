@@ -2,7 +2,7 @@ body {
   margin: 0;
   background-color: #000;
   color: #fff;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Typography */
@@ -115,15 +115,17 @@ a {
 
 /* Quote */
 .quote {
-  padding: 70px 45px;
+  padding: 150px 45px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 .quote .text {
-  padding: 0 20px;
+  padding: 0 40px;
   font-size: 19px;
+  min-width: 200px;
 }
 
 .quote p {
@@ -132,6 +134,24 @@ a {
 
 .quote .author {
   font-weight: bold;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #54FFBD;
+  border: 1px solid;
+  border-radius: 24px;
+  padding: 11px 20px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #54FFBD;
+  color: #000;
 }
 
 /* Screens */
@@ -191,7 +211,7 @@ a {
   margin: 0px 45px;
   padding: 55px 0 80px;
   display: flex;
-  font-size: 15px;
+  font-size: 14.4px;
   flex-wrap: wrap;
 }
 
@@ -200,11 +220,11 @@ a {
 }
 
 .footer-bottom {
-  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   flex-flow: row-reverse;
   align-items: flex-end;
+  width: 100%;
 }
 
 /* Legal */
@@ -214,6 +234,7 @@ a {
 
 .links li {
   margin-right: 50px;
+  margin-top: 20px;
 }
 
 /* Socials */
