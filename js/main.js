@@ -4,9 +4,9 @@ function scroll() {
   var sections = document.getElementsByClassName("screen");
   var navlist = document.getElementsByClassName("nav-item");
 
-  // Check if the section is currently in view
-  // Then apply the active class name to the corresponding nav item
   for (var i = 0; i < sections.length; i++) {
+    // Check if the section is currently in view
+    // Then apply the active class name to the corresponding nav item
     if (!navlist[i].classList.contains("active") && window.scrollY >= sections[i].offsetTop && window.scrollY < sections[i].offsetTop + def.clientHeight / 2) {
       for (var y = 0; y < navlist.length; y++) {
         if (navlist[y] !== navlist[i]) navlist[y].classList.remove("active");
