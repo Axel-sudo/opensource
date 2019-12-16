@@ -94,6 +94,9 @@ var softatlas = [{
 
 // Switch category
 function switchCat(cat) {
+  // Close selection block
+  closeSel();
+
   var software = softatlas.filter(soft => soft.cat === cat);
   // Move cursor
   document.getElementById("cur").style.transform = "translateX(" + document.getElementById(cat).offsetLeft + "px)";
@@ -111,10 +114,26 @@ function switchCat(cat) {
 
 switchCat("dev");
 
+function closeSel() {
+  for (var i = 0; i < document.getElementsByClassName("res-item").length; i++) {
+    document.getElementsByClassName("res-item")[i].style.marginBottom = "0";
+  }
+  document.getElementById("selblock").style.display = "none";
+  document.getElementById("selblock").style.top = "0";
+}
+
 // Open selection block
-function openSel(e, name) {
-  console.log(e);
-  // console.log(this);
+function openSel(name) {
+  closeSel();
+  var software = softatlas.find(soft => soft.name === name);
+  document.getElementById("title").innerHTML = software.name;
+  document.getElementById("body").innerHTML = software.desc;
+  document.getElementById("license").innerHTML = software.license;
+  document.getElementById("link").href = software.git;
+  document.getElementById("icon").style.backgroundImage = "url(./img/" + software.img + ")";
+  document.getElementById("selblock").style.display = "block";
+  document.getElementById("selblock").style.top = (document.getElementById("item-" + name).clientHeight * 2) - 30 + document.getElementById("categories").clientHeight + "px";
+  document.getElementById("item-" + name).style.marginBottom = document.getElementById("selblock").clientHeight + 50 + "px";
 }
 
 // Navbar scroll
@@ -156,3 +175,5 @@ window.onload = function () {
 }
 
 window.onscroll = scroll;
+
+window.onresize = closeSel;

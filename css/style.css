@@ -344,6 +344,10 @@ h3 {
 }
 
 /* Software items */
+.software {
+  position: relative;
+}
+
 .results {
   width: 100%;
   display: flex;
