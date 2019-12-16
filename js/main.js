@@ -1,5 +1,5 @@
 // Software list
-const softatlas = [{
+var softatlas = [{
   cat: "dev",
   license: "MIT",
   name: "Atom",
@@ -94,7 +94,27 @@ const softatlas = [{
 
 // Switch category
 function switchCat(cat) {
+  var software = softatlas.filter(soft => soft.cat === cat);
+  // Move cursor
+  document.getElementById("cur").style.transform = "translateX(" + document.getElementById(cat).offsetLeft + "px)";
+  document.getElementById("cur").style.width = document.getElementById(cat).clientWidth + "px";
 
+  document.getElementById("res").style.opacity = "0";
+  setTimeout(function () {
+    document.getElementById("res").innerHTML = "";
+    for (var i = 0; i < software.length; i++) {
+      document.getElementById("res").innerHTML += "<div class=\"res-item\" id=\"item-" + software[i].name + "\" onclick=\"openSel('" + software[i].name + "')\"><div class=\"img-icon\" style=\"background-image:url(./img/" + software[i].img + ")\"></div></div>";
+    }
+    document.getElementById("res").style.opacity = "1";
+  }, 200);
+}
+
+switchCat("dev");
+
+// Open selection block
+function openSel(e, name) {
+  console.log(e);
+  // console.log(this);
 }
 
 // Navbar scroll
@@ -124,7 +144,7 @@ window.onload = function () {
   document.getElementById("dev").onclick = function () {
     switchCat("dev");
   }
-  document.getElementById("des").onclick = function () {
+  document.getElementById("design").onclick = function () {
     switchCat("design");
   }
   document.getElementById("edit").onclick = function () {
