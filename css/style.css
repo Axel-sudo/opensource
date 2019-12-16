@@ -344,6 +344,8 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   flex-basis: 0;
+  transition: height .2s;
+  position: relative;
   justify-content: space-between;
 }
 
@@ -352,18 +354,18 @@ h3 {
   height: 100px;
   background-color: red;
   border-radius: 5px;
-  margin-bottom: 5%;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
 .selected {
   border-radius: 10px;
-  width: 100%;
   padding: 30px 30px;
   border: 3px solid #fff;
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   background: #000;
+  margin-bottom: 5%;
 }
 
 .sel-cursor {
@@ -406,8 +408,8 @@ h3 {
   margin-top: -3.5px;
   vertical-align: middle;
   background: url(../img/like.svg);
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -417,6 +419,22 @@ h3 {
 .license {
   padding-top: 10px;
   text-align: right;
+}
+
+.sel-container {
+  display: flex;
+  align-items: center;
+}
+
+.sel-icon {
+  margin-right: 30px;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/atom.png);
 }
 
 /* Screen content */
