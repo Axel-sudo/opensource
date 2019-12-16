@@ -339,6 +339,85 @@ h3 {
   background-color: #54FFBD;
 }
 
+.results {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 0;
+  justify-content: space-between;
+}
+
+.res-item {
+  width: 150px;
+  height: 100px;
+  background-color: red;
+  border-radius: 5px;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+.selected {
+  border-radius: 10px;
+  width: 100%;
+  padding: 30px 30px;
+  border: 3px solid #fff;
+  position: relative;
+  box-sizing: border-box;
+  background: #000;
+}
+
+.sel-cursor {
+  top: -2px;
+  left: -30px;
+  z-index: 2;
+  background: #000;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+  border: 3px solid #fff;
+  clip-path: polygon(52% 0, 35% 0, 0 35%, 0 39%, 0 0);
+}
+
+.sel-body {
+  padding-top: 20px;
+}
+
+.sel-body a {
+  padding-top: 10px;
+  display: block;
+  color: #54FFBD;
+  text-decoration: none;
+}
+
+.sel-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.likes {
+  font-size: 18px;
+  float: right;
+  vertical-align: middle;
+}
+
+.heart {
+  margin-left: 10px;
+  vertical-align: middle;
+  background: url(../img/like.svg);
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+.license {
+  padding-top: 10px;
+  text-align: right;
+}
+
 /* Screen content */
 .vid {
   width: 100%;
