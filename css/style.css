@@ -401,6 +401,7 @@ h3 {
   transform: rotate(45deg);
   border: 3px solid #fff;
   clip-path: polygon(52% 0, 35% 0, 0 35%, 0 39%, 0 0);
+  transition: transform .2s;
 }
 
 .sel-body {

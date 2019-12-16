@@ -114,17 +114,24 @@ function switchCat(cat) {
 
 switchCat("dev");
 
-function closeSel() {
+function closeSel(open) {
   for (var i = 0; i < document.getElementsByClassName("res-item").length; i++) {
     document.getElementsByClassName("res-item")[i].style.marginBottom = "0";
   }
+  if (!open) return;
   document.getElementById("selblock").style.display = "none";
   document.getElementById("selblock").style.top = "0";
 }
 
 // Open selection block
 function openSel(name) {
-  closeSel();
+  // Close selection block
+  closeSel(false);
+
+  // Move selection cursor
+  document.getElementById("cursor").style.transform = "translate3d(" + (document.getElementById("item-" + name).offsetLeft + (document.getElementById("item-" + name).clientWidth / 2)) + "px,0,0) rotate(45deg)";
+
+  // Assign found details to selection block
   var software = softatlas.find(soft => soft.name === name);
   document.getElementById("title").innerHTML = software.name;
   document.getElementById("body").innerHTML = software.desc;
