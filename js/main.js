@@ -95,7 +95,7 @@ var softatlas = [{
 // Switch category
 function switchCat(cat) {
   // Close selection block
-  closeSel();
+  closeSel(true);
 
   var software = softatlas.filter(soft => soft.cat === cat);
   // Move cursor
@@ -183,4 +183,6 @@ window.onload = function () {
 
 window.onscroll = scroll;
 
-window.onresize = closeSel;
+window.onresize = function () {
+  closeSel(true)
+}
