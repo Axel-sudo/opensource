@@ -90,7 +90,12 @@ const softatlas = [{
   img: "chromium.png",
   git: "https://github.com/chromium/chromium",
   desc: "Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web."
-}]
+}];
+
+// Switch category
+function switchCat(cat) {
+
+}
 
 // Navbar scroll
 function scroll() {
@@ -113,6 +118,21 @@ function scroll() {
   // Make the navbar sticky when it reaches the bottom of the page
   if (window.scrollY >= document.getElementById("ft").offsetTop - window.innerHeight) document.getElementById("nav").className = "col-nav sticky";
   else document.getElementById("nav").className = "col-nav";
+}
+
+window.onload = function () {
+  document.getElementById("dev").onclick = function () {
+    switchCat("dev");
+  }
+  document.getElementById("des").onclick = function () {
+    switchCat("design");
+  }
+  document.getElementById("edit").onclick = function () {
+    switchCat("edit");
+  }
+  document.getElementById("browser").onclick = function () {
+    switchCat("browser");
+  }
 }
 
 window.onscroll = scroll;
