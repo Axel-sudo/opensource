@@ -220,10 +220,10 @@
               <div class="img-icon" style="background-image:url(./img/atom.png)"></div>
             </div>
             <div class="res-item" data-item="atom" style="margin-bottom:305px;">
-              <div class="img-icon" style="background-image:url(./img/atom.png)"></div>
+              <div class="img-icon" style="background-image:url(./img/vim.png)"></div>
             </div>
             <div class="res-item" data-item="atom">
-              <div class="img-icon" style="background-image:url(./img/atom.png)"></div>
+              <div class="img-icon" style="background-image:url(./img/vscodium.png)"></div>
             </div>
             <div class="res-item" data-item="atom">
               <div class="img-icon" style="background-image:url(./img/atom.png)"></div>
@@ -244,18 +244,18 @@
               <div class="img-icon" style="background-image:url(./img/atom.png)"></div>
             </div>
 
-            <div class="selected" style="top:120px;" id="sel">
-              <div class="sel-cursor" style="left:50px;"></div>
+            <div class="selected" style="top:120px;" id="selblock">
+              <div class="sel-cursor" style="transform:translate3d(70px,0,0) rotate(45deg)" id="cursor"></div>
               <div class="likes">1.024<span class="heart"></span></div>
               <div class="sel-container">
-                <div class="sel-icon"></div>
+                <div class="sel-icon" id="icon"></div>
                 <div class="sel-body">
-                  <span class="sel-title">Placeholder</span>
-                  <div class="sel-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ut iste illo doloremque dolore harum sed, quis beatae similique. Harum natus dicta quis alias officiis explicabo, quisquam ab ex ad?</div>
-                  <a href="https://example.com">Github</a>
+                  <span class="sel-title" id="title"></span>
+                  <div class="sel-text" id="body"></div>
+                  <a id="link">Github</a>
                 </div>
               </div>
-              <div class="license">License: <span class="bold">AGPL</span></div>
+              <div class="license">License: <span class="bold" id="license"></span></div>
             </div>
           </div>
         </div>
